@@ -1,10 +1,17 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body{
+    font-family: Montserrat, sans-serif;
+}
 #biggest-container{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
     grid-template-areas:"header header header header header"
                         "nav nav nav nav nav"
-                        "main main main aside aside"
+                        "main main main main aside"
                         "footer footer footer footer footer";
 
 }
@@ -16,7 +23,7 @@ header{
        
     );
     width: 100%;
-    
+    height: fit-content;
     grid-area: header;
     display: flex;
     justify-content: space-between;
@@ -28,16 +35,34 @@ header img{
     width: 135px;
 }
 nav {
-    font-size: 200px;
+    font-size: 23px;
     color: black;
     grid-area: nav;
-    background-color: green;
+    background-color: #1a3a5c;
+    position: sticky;
+    top: 0;
+    padding: 40px;
+    
+
+}
+nav a{
+    color: white;
+    text-decoration: none   ;
+    padding-left: 20px;
+}
+nav a:hover{
+    font-weight: bold;
+    
 }
 main{
-    font-size: 200px;
     color: black;
     grid-area: main;
-    background-color: yellow;
+    background-color: rgba(80, 135, 255, 0.767);
+    min-width: 0;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 aside{
     font-size: 200px;
@@ -46,10 +71,14 @@ aside{
     background-color: blueviolet;
 }
 footer {
-    font-size: 200px;
-    color: black;
+    background-color: #1a3a5c;
+    color: white;
+    font-size: 35px;
+    text-align: center;
     grid-area: footer;
-    background-color: brown;
+    padding: 20px;
+    text-align: justify;
+    
 }
 #focim{
     margin-top: 100px;
@@ -58,7 +87,7 @@ footer {
     height: auto;
     text-align: justify;
 }
-#main_kepek{
+#header_kepek{
    width: 60%;
     display: flex;
     flex-direction: column;
@@ -92,4 +121,14 @@ footer {
     background-color: black;
     width: 100px;
     height: 100px;
+}
+.block{
+    box-sizing: border-box;
+    width: 100%;
+    height: fit-content;
+    font-size: 25px;
+    background-color: #d2e7f8e5;
+    border: 10px solid rgba(255, 218, 11, 0.863);
+    text-align: justify;
+    padding: 20px;
 }
